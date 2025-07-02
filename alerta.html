@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Alerta de Segurança</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo-icon">🛶</div>
+    <div class="title">Banco Mocorongo</div>
+  </div>
+  <div class="container">
+    <div class="icon"></div>
+    <h2>⚠️ Simulação de Phishing</h2>
+    <p id="saudacao" style="color:white;"></p>
+    <p style="color:white;">Você participou de uma simulação educativa. Nunca forneça seus dados reais em sites suspeitos.</p>
+    <ul style="text-align:left; color:white;">
+      <li>Confira sempre o endereço do site (URL).</li>
+      <li>Desconfie de promessas exageradas e links por mensagens.</li>
+      <li>Sites reais usam HTTPS e domínio confiável.</li>
+    </ul>
+    <p style="color:white;"><em>Obrigado por participar. Fique atento!</em></p>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nomeCompleto = params.get("nome") || "";
+    const primeiroNome = nomeCompleto.trim().split(" ")[0];
+    if (primeiroNome) {
+      document.getElementById("saudacao").innerHTML = `<strong>${primeiroNome}</strong>, este site era uma simulação!`;
+    } else {
+      document.getElementById("saudacao").innerText = "Este site era uma simulação!";
+    }
+  </script>
+</body>
+</html>

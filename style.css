@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #4a7ca7);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Faixa do topo */
+.header {
+  width: 100%;
+  background-color: #002f5e;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.header .logo-icon {
+  font-size: 26px;
+  margin-right: 12px;
+}
+
+.header .title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Conteúdo principal */
+.container {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  padding: 40px 30px;
+  text-align: center;
+  margin: 60px auto;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  background: #35597c;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon::before {
+  content: "👤";
+  font-size: 40px;
+  color: white;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+label {
+  color: white;
+  display: block;
+  margin-top: 15px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+  color: white;
+  font-size: 15px;
+}
+
+input::placeholder {
+  color: #e0e0e0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  font-size: 16px;
+  background-color: #002f5e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #001d3a;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 20px;
+  text-align: left;
+  color: white;
+}
+
+p.footer {
+  color: white;
+  font-size: 12px;
+  margin-top: 30px;
+  opacity: 0.7;
+}

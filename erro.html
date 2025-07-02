@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Erro no Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo-icon">🛶</div>
+    <div class="title">Banco Mocorongo</div>
+  </div>
+  <div class="container">
+    <div class="icon"></div>
+    <h2>Erro no Cadastro</h2>
+    <p style="color:white;">Ocorreu um erro ao processar seus dados.</p>
+    <p style="color:white;"><i>Erro 503 - Serviço Temporariamente Indisponível</i></p>
+    <button onclick="location.reload()">Recarregar Página</button>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nome = params.get("nome") || "";
+    if (localStorage.getItem("phishing-revelado")) {
+      window.location.href = "alerta.html?nome=" + encodeURIComponent(nome);
+    } else {
+      localStorage.setItem("phishing-revelado", "true");
+    }
+  </script>
+</body>
+</html>
